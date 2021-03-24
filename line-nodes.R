@@ -1,0 +1,9 @@
+tribble(~node,~n,
+        "#forwards",3,
+        "#defense",2,
+        "#pp-forwards-container",3,
+        "#pp-defense-container",2,
+        "#pp2-forwards-container",3,
+        "#pp2-defense-container",2,
+        "#goalies-container",1,
+        "#ir-container",1)
