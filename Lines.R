@@ -30,22 +30,16 @@ lines <- function (n) {
         })
 }
 
+# Create blank tibble containing just positions and line numbers
 df = tibble(read_csv("positions.csv"))
 
+# Loop through all teams and append to df
 #for (i in 1:length(tm)) 
 for (i in 11:13) {
     team(i)
     df<-bind_cols(df,lines(i))
 }
-#print(df)
-write_csv(df,"lines.csv")
-#INJURIES
-    #tryCatch(lines[[8]],error=function(e) NA)
-    # Pull injury type ("IR", "DTD", "OUT")
-    # Sorted by Position (from NHL API)
 
-# FULL TEAM TABLE
-    # Used to display full team for visualization
-    # 3 x 7 matrix
-    # No col headers
-    # F on top, D lines below and split L & R w/ G in between D
+# Write df to "lines.csv"
+write_csv(df,"lines.csv")
+#print(df)
